@@ -1,0 +1,28 @@
+.example-card {
+    max-width: 400px;
+    margin: 0 auto 20px;
+}
+
+.example-header-image {
+    background-size: cover;
+}
+
+.repo-actions {
+    font-size: 12px;
+    text-align: right;
+    color: #9b9b9b;
+    .repo-language {
+        line-height: 36px;
+        padding: 0 16px;
+        float: left;
+    }
+}
+
+.card-image {
+    position: relative;
+    overflow: hidden;
+    img {
+        transform: scale(1.1);
+        filter: blur(4px);
+    }
+}

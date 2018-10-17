@@ -1,0 +1,24 @@
+<ng-container *ngIf="type === 'github'">
+    <mat-card class="example-card" [@routerTranAni]>
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image': 'url('+searchResultItem.avatarUrl+')'}"></div>
+        <mat-card-title>{{ searchResultItem.userName }}</mat-card-title>
+        <mat-card-subtitle>{{ searchResultItem.fullName }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ searchResultItem.description }}</p>
+      </mat-card-content>
+      <mat-card-actions class="repo-actions">
+        <em class="repo-language">{{ searchResultItem.language }}</em>
+        <button mat-button>
+          <mat-icon class="md-14">remove_red_eye</mat-icon>{{ searchResultItem.watchersCount }}
+        </button>
+        <button mat-button>
+          <mat-icon class="md-14">call_split</mat-icon>{{ searchResultItem.forksCount }}
+        </button>
+        <button mat-button>
+          <mat-icon class="md-14">star</mat-icon>{{ searchResultItem.stargazersCount }}
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>

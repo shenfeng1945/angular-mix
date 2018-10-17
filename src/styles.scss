@@ -7,3 +7,57 @@ html,body{
 *{
    box-sizing: border-box;
 }
+.mat-drawer-content {
+    padding: 0 20px;
+}
+
+.material-icons.md-12 {
+    font-size: 12px;
+}
+
+.material-icons.md-14 {
+    width: 16px;
+    height: 16px;
+    font-size: 14px;
+}
+
+.material-icons.md-16 {
+    font-size: 16px;
+}
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+.mat-card-actions .mat-button {
+    font-weight: normal;
+    min-width: auto;
+    padding: 0 4px;
+}
+
+.progress-container {
+    position: relative;
+    bottom: 20px;
+    z-index: 999;
+}
+
+.mat-progress-bar {
+    height: 3px !important;
+}
+
+.mat-card-content>:last-child:not(.mat-card-footer),
+.mat-card>:last-child:not(.mat-card-footer) {
+    margin-bottom: -24px;
+}
