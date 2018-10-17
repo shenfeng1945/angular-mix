@@ -3,6 +3,7 @@ import { Observable, fromEvent } from 'rxjs';
 import { debounceTime, pluck, map, distinctUntilChanged, switchMap, filter } from 'rxjs/operators';
 import { GithubApiService } from '../../service/github-api.service';
 import { EventBusService } from '../../service/bus-event.service';
+import { CloudMusicService } from '../../service/cloud-music.service';
 
 @Component({
     selector: 'app-search',
@@ -16,6 +17,7 @@ export class SearchComponent implements OnInit {
     constructor(
         private githubApiService: GithubApiService,
         private eventBusService: EventBusService,
+        private cloudMusicService: CloudMusicService,
     ) { }
 
     ngOnInit() {
@@ -38,7 +40,13 @@ export class SearchComponent implements OnInit {
                 distinctUntilChanged(),
                 // switchMap每次发出新值，会取消之前的Observable，防止异步请求顺序错乱问题，可能先发出的比后发出的请求返回慢，导致先发出的覆盖最新的结果
                 switchMap(val => {
-                    return this.githubApiService.getGithubData(val);
+                    if (this.type === 'github') {
+                        this.githubApiService.type = this.type;
+                        return this.githubApiService.getGithubData(val);
+                    } else if (this.type === 'music') {
+                       this.cloudMusicService.type = this.type;
+                       return this.cloudMusicService.getCloudMusicData(val);
+                    }
                 })
             );
     }

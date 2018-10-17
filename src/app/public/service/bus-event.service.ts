@@ -7,4 +7,5 @@ import { Subject } from 'rxjs';
 export class EventBusService {
     public searchResult: Subject<any> = new Subject<any>();
     public progressLoading: Subject<boolean> = new Subject<boolean>();
+    public toggleMusic: Subject<any> = new Subject<any>();
 }

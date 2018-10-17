@@ -23,12 +23,16 @@ export class AppComponent implements OnInit {
         this.initMockData();
     }
     private initMockData(): void {
-        this.navbarList = Array.from({ length: 1 }, (_, i) => {
+        this.navbarList = Array.from({ length: 2 }, (_, i) => {
             const temp = new NavBarList();
             switch (i) {
                 case 0:
                     temp.name = 'github搜索';
                     temp.path = '/githubsearch';
+                    break;
+                case 1:
+                    temp.name = '网易云音乐';
+                    temp.path = '/cloudmusic';
                     break;
                 default:
                     break;

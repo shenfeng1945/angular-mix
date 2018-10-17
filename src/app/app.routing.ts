@@ -10,6 +10,10 @@ const routes: Routes = [
    {
        path: 'githubsearch',
        loadChildren: './github-search/github-search.module#GithubSearchModule'
+   },
+   {
+       path: 'cloudmusic',
+       loadChildren: './cloud-music/cloud-music.module#CloudMusicModule'
    }
 ];
 

@@ -9,7 +9,8 @@ import { OwnGithubSearchOutput } from '../../model/github-item.model';
 })
 export class CardListComponent implements OnInit {
     searchResult: OwnGithubSearchOutput = new OwnGithubSearchOutput();
-    a = 12.111;
+    songId: number;
+    isPlay: boolean;
     constructor(
         private eventBusService: EventBusService
     ) { }
@@ -17,6 +18,10 @@ export class CardListComponent implements OnInit {
     ngOnInit() {
         this.eventBusService.searchResult.subscribe(val => {
             this.searchResult = val;
+        });
+        this.eventBusService.toggleMusic.subscribe(res => {
+            this.songId = res.songId;
+            this.isPlay = res.isPlay;
         });
     }
 

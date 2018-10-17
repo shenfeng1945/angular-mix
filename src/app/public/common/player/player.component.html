@@ -1,0 +1,8 @@
+<div class="player">
+    <button mat-fab class="icon" (click)="onplay()" *ngIf="!isPlay">
+      <mat-icon aria-label="Example icon-button with a heart icon">play_arrow</mat-icon>
+    </button>
+    <button mat-fab class="icon" (click)="onpause()" *ngIf="isPlay">
+      <mat-icon aria-label="Example icon-button with a heart icon">pause_arrow</mat-icon>
+    </button>
+  </div>

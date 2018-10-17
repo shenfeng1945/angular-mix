@@ -7,17 +7,19 @@ import { SharedModule } from './shared/shared.module';
 import { PublicModule } from './public/public.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    SharedModule,
-    PublicModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+   ],
+   imports: [
+      BrowserModule,
+      SharedModule,
+      PublicModule,
+      AppRoutingModule,
+      BrowserAnimationsModule
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }
