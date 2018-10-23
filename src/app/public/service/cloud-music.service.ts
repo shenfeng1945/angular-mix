@@ -17,7 +17,7 @@ export class CloudMusicService {
     public getCloudMusicData(val: string): Observable<OwnCloudMusicOutput> {
         const URL = `${ServiceApi.CloudMusicSong}${val}`;
         this.eventBusService.progressLoading.next(true);
-        return this.httpClient.get(URL)
+        return this.httpClient.get<string>(URL)
             .pipe(
                 finalize(() => this.eventBusService.progressLoading.next(false)),
                 switchMap((res: CloudMusicSong) => {

@@ -1,0 +1,6 @@
+<div class="ball" (touchstart)="touchStart($event)"
+     (touchmove)="touchMove($event)"
+     (touchend)="touchEnd($event)"
+     [ngStyle]="{'transform': 'translate('+ballTranslateX+','+ballTranslateY+')'}">
+    <img src="/assets/WE-icon.svg" alt="">
+</div>

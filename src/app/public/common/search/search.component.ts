@@ -14,6 +14,7 @@ export class SearchComponent implements OnInit {
     @Input() placeholderTitle: string;
     @Input() type: string;
     @ViewChild('searchInput') searchInput: ElementRef;
+    value = '';
     constructor(
         private githubApiService: GithubApiService,
         private eventBusService: EventBusService,

@@ -6,6 +6,7 @@ import { CardItemComponent } from './card-item/card-item.component';
 import { RoundPipe } from '../pipe/round.pipe';
 import { ProgressBusyComponent } from './progress-busy/progress-busy.component';
 import { PlayerComponent } from './player/player.component';
+import { SuspendBallComponent } from './suspend-ball/suspend-ball.component';
 
 @NgModule({
     imports: [
@@ -18,6 +19,7 @@ import { PlayerComponent } from './player/player.component';
         ProgressBusyComponent,
         RoundPipe,
         PlayerComponent,
+        SuspendBallComponent,
     ],
     exports: [
         SearchComponent,
@@ -26,6 +28,7 @@ import { PlayerComponent } from './player/player.component';
         ProgressBusyComponent,
         RoundPipe,
         PlayerComponent,
+        SuspendBallComponent,
     ],
 })
 export class AppCommonModule { }
